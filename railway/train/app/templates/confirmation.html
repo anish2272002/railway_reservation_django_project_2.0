@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY</title>
+    <script src="https://kit.fontawesome.com/16ba50a5b2.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        html,body{
+            height:100vh; /* Important for linear-gradient to come properly */
+            font-size: 1vmax;
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 98%;
+        }
+        .contain{
+            display: grid;
+            grid-template-rows: 40% 60%;
+            font-family: 'Lato', sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_plane{
+            font-size: 10rem;
+            text-align: center;
+        }
+        .email_text{
+            opacity: 0.6;
+        }
+        .email_text:hover{
+            opacity: 1;
+        }
+        @media (max-width:900px) and (max-height:900px){
+            .text_container{
+                font-size: 1.8rem;
+            }
+            .img_plane{
+                font-size: 12rem;
+            }
+        }    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contain">
+            <h2 class="text_container">
+                <p>A confirmation email is sent to <span class="email_text">{{email}}</span></p>
+                <p>Please verify your email to complete your Sign Up process.</p>
+            </h2>
+            <h1 class="img_plane"><i class="fas fa-paper-plane"></i></h1>
+        </div>
+    </div>
+</body>
+</html>

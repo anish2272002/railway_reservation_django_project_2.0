@@ -1,0 +1,138 @@
+@keyframes emerge{
+    0%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}
+
+html,body{
+    height:100vh; /* Important for linear-gradient to come properly */
+    font-size: 1vmax;
+    overflow: hidden;
+    background: linear-gradient(to top right,blue,rgb(175, 2, 175));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+}
+
+.col{
+    display:grid;
+    grid-template-rows: 15% 85%;
+    height:40rem;
+    width:25rem;
+    background: whitesmoke;
+    padding:2rem;
+    box-sizing: border-box;
+    animation-name: emerge;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.row1{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.fas{
+    color: black;
+    opacity: 0.5;
+}
+.fas:hover{
+    opacity: 1;
+}
+.col1{
+    font-family: "Lobster",cursive;
+    font-size: 1.3rem;
+}
+
+.col2{
+    text-align: center;
+}
+.img_box{
+    height:70%;
+    width:90%;
+    margin-top:15%;
+    border-radius: 50%;
+}
+
+.row2{
+    display: grid;
+    grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 14% 2%;
+    font-family: "KoHo",cursive;
+    align-items: center;
+}
+
+.form_title{
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+}
+
+.form_group{
+    border: 1.5px solid rgba(0,0,0,0.6);
+    border-radius: 2rem;
+    padding: 6px;
+    padding-left: 13px;
+    box-sizing: border-box;
+    max-width: 90%;
+}
+
+input{
+    outline:none;
+    border:none;
+    background: none;
+}
+.btn-sign-up{
+    height:80%;
+    width:90%;
+    font-size: 1rem;
+    border-radius: 30rem;
+    padding:1rem;
+    color:whitesmoke;
+    background: rgb(23, 201, 97);
+}
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width:950px){
+    html,body{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:600px){
+    html,body{
+        font-size: 1vmax;
+    }
+    .col{
+        width: 45rem;
+        height: 68rem;
+        font-size: 15px;
+    }
+    .btn-sign-up{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:450px) and (max-height:900px){
+    html,body{
+        font-size: 8px;
+        min-height: 650px;
+        overflow: scroll;
+    }
+    .col1{
+        font-size: 2rem;
+    }
+    .img_box{
+        width: 78%;
+    }
+    .container{
+        min-height: 640px;
+    }
+}

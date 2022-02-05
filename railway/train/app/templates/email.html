@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Email</title>
+    <style>
+        .btn{
+            height:40px;
+            width: 100px;
+            background: rgb(76, 23, 201);
+            color:aliceblue;
+            border-radius: 2rem;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h4>Hi {{fname}}&nbsp;{{lname}}</h4>
+    <p>We just need you to confirm your email address<br>
+        and finish setting up your new <i>Rail Co.</i> account.</p>
+    <a href={{email_link}}><button class="btn">Click Here</button></a>
+    <p>Team <i>Rail Co.</i></p>
+</body>
+</html>

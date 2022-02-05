@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/16ba50a5b2.js" crossorigin="anonymous"></script>
+    <!-- googleapi -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=KoHo&family=Lobster">
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="{% static 'style_sign.css' %}" type="text/css">
+    <title>RAILWAY</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <div class="row1">
+                <h4 class="col1"><i class="fas fa-train"></i>&nbsp;&nbsp;&nbsp;Rail Co.</h4>
+                <div class="col2"><img src="{% static 'img6Q.png' %}" class="img_box"></div>
+            </div>
+            <form action="confirmation" method="POST" class="row2" id="my_form">
+                {% csrf_token %}
+                <div class="form_title"><h3>Welcome</h3>
+                <h1><a href="/"><i class="fas fa-chevron-circle-left"></i></h1></a></div>
+                <div class="form_group">
+                    <label><input type="email" name="email" placeholder="Email" required></label>
+                </div>
+                <div class="form_group">
+                    <label><input type="password" name="password" placeholder="Password" required></label>
+                </div>
+                <div class="form_group">
+                    <label><input type="text" name="fname" placeholder="First Name" required></label>
+                </div>
+                <div class="form_group">
+                    <label><input type="text" name="lname" placeholder="Last Name" required></label>
+                </div>
+                <div class="form_group">
+                    <label><input type="date" name="dob" placeholder="Date Of Birth" id="dob" required></label>
+                </div>
+                <div class="form_group">
+                    <label>Male<input type="radio" name="gender" value=True checked></label>&nbsp;
+                    <label>Female<input type="radio" name="gender" value=False></label>
+                </div>
+                <div><button type="submit" class="btn btn-sign-up" form="my_form">Sign Up</button></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#dob").defaultValue = "2002-07-22";     //comes handy with dates
+    </script>
+</body>
+</html>
